@@ -1,0 +1,12 @@
+{
+  "name": "preflight-checklist",
+  "description": "Skills from the Pre-Flight Checklist article series for first-time biotech and medtech founders",
+  "owner": { "name": "Ricardo Londono" },
+  "plugins": [
+    {
+      "name": "biotech-preflight",
+      "source": "./",
+      "description": "Gate 1 — Is the problem real? Desk research plus a customer-discovery kit, before you talk to anyone."
+    }
+  ]
+}
