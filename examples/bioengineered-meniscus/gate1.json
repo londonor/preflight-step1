@@ -1,0 +1,520 @@
+{
+ "idea_id": "bioengineered-meniscus",
+ "created": "2026-11-09",
+ "mode": "autonomous",
+ "input_text": "bioengineered meniscus",
+ "origin": "founder request, 9 Nov 2026 — first run of a new idea under the current skill",
+ "fail_conditions": {
+  "defaults": [
+   {
+    "header": "Is the problem real?",
+    "condition": "Fail if the problem can't be stated in one sentence an orthopaedic or sports-medicine surgeon would agree with, without mentioning the technology."
+   },
+   {
+    "header": "Is there one place to start?",
+    "condition": "Fail if no single first indication — one population or procedure — can be established. The input named a category, so a candidate table was required."
+   }
+  ],
+  "venture_specific": {
+   "header": "Is the problem serious, and does anyone count it?",
+   "condition": "Fail if losing meniscal tissue leads to arthritis or another knee operation in fewer than 1 in 20 patients under today's practice, or if no registry, trial, or series has measured what happens to a knee after meniscus is removed."
+  },
+  "results": {
+   "default_1": "cleared",
+   "default_2": "cleared",
+   "venture_specific": "cleared"
+  },
+  "evidence": {
+   "default_1": "Problem sentence stated without the technology; ESSKA 2016: 'Loss of meniscus function may negatively affect the knee in the long term' (Grade B).",
+   "default_2": "Symptomatic meniscus-deficient knee under about 55 (the MAT population), selected from the candidate table.",
+   "venture_specific": "Abram 2019 (n=834,393): 13.49% knee arthroplasty within 15 years of partial meniscectomy, RR 10.27 vs general population; Roos 1998: KL≥2 OA 48% vs 7% at 21 years."
+  }
+ },
+ "problem": {
+  "sentence": {
+   "text": "When a torn meniscus cannot be repaired, the tissue is removed, and the knee that loses it develops arthritis and comes to replacement at many times the rate of an intact knee. The only tissue replacement in use — a donor meniscus — reaches a tiny fraction of patients, is sized with error, and survives in about three of four patients at ten years and six of ten at fifteen.",
+   "provenance": "agent-resolved",
+   "founder_quote": "bioengineered meniscus",
+   "sources": [
+    "Abram, Bone Joint J 2019",
+    "Roos, Arthritis Rheum 1998",
+    "Novaretti, Arthroscopy 2019",
+    "Araujo-Espinoza, Ann Jt 2026",
+    "Beaufils, KSSTA 2017"
+   ]
+  },
+  "proposed_technology": "Bioengineered meniscus.",
+  "first_indication": {
+   "statement": "Patients under about 55 with a symptomatic meniscus-deficient knee after subtotal or total meniscectomy — today's candidates for meniscal allograft transplantation.",
+   "provenance": "agent-selected",
+   "candidates": [
+    {
+     "candidate": "Symptomatic meniscal deficiency after subtotal/total meniscectomy, under ~55 (the MAT population)",
+     "recognized_source": "Araujo-Espinoza, Ann Jt 2026; Gitelis, Am J Orthop 2018",
+     "number": "MAT survivorship 73.5% at 10 yr, 60.3% at 15 yr; complication 21.3%, failure 10.6%; MAT incidence 0.12–0.24 per 100,000/yr (US, 2007–2011)",
+     "number_source": "Novaretti 2019; Elattar via Gitelis 2018; Cvetanovich 2015 via Araujo-Espinoza 2026 (secondary)",
+     "acuteness": "high — young, symptomatic, on a path to arthroplasty; population small as measured, no denominator found",
+     "selected": true
+    },
+    {
+     "candidate": "Patients undergoing arthroscopic partial meniscectomy (replace at time of removal)",
+     "recognized_source": "ESSKA 2016 consensus; Abram 2019",
+     "number": "13.49% knee arthroplasty at 15 yr; RR 10.27 vs general population; RR 39.62 at ages 30–39; HR 2.99 vs contralateral knee; 387,833 meniscectomies 2005–2011 in ~9% US sample; ~700,000/yr (secondary)",
+     "number_source": "Abram 2019; Abrams 2013; Gitelis 2018",
+     "acuteness": "large and well counted; harm delayed 10–20 yr; most patients ~50 with degenerative tears; field shifting to repair; young subgroup is the strongest alternative",
+     "selected": false
+    },
+    {
+     "candidate": "Total or open meniscectomy",
+     "recognized_source": "Roos 1998",
+     "number": "KL≥2 OA 48% vs 7% at 21 yr; RR 14.0 (95% CI 3.5–121.2)",
+     "number_source": "Roos 1998",
+     "acuteness": "clearest harm number but for a procedure no longer performed as such; evidence of seriousness, not a place to start",
+     "selected": false
+    }
+   ]
+  }
+ },
+ "questions": {
+  "q1_statable": {
+   "answer": "yes",
+   "evidence": [
+    {
+     "claim": "Problem sentence without the technology; ESSKA consensus and MAT reviews state it in the same terms",
+     "url": "https://link.springer.com/content/pdf/10.1007/s00167-016-4407-4.pdf",
+     "label": "verified"
+    }
+   ]
+  },
+  "q2_who_has_it": {
+   "answer": "yes",
+   "users": [
+    "sports-medicine orthopaedic surgeons performing MAT at specialized centers",
+    "orthopaedic surgeons performing meniscectomy and repair who refer MAT out"
+   ],
+   "purchasers": [
+    "hospitals and surgery centers",
+    "musculoskeletal tissue banks supply donor menisci"
+   ],
+   "payers": [
+    "insurers and Medicare — fund the MAT episode now and the arthroplasty 10–20 years later"
+   ],
+   "evidence": [
+    {
+     "claim": "The remover, the treater of the consequence, and the payer are different people, often a decade apart",
+     "url": "",
+     "label": "verified"
+    }
+   ]
+  },
+  "q3_how_often_how_bad": {
+   "answer": "yes",
+   "number": "13.49% knee arthroplasty within 15 years of partial meniscectomy (16,256/120,493); RR 10.27 vs general population; RR 39.62 at ages 30–39; HR 2.99 vs own other knee",
+   "unit": "percent of patients; relative risk",
+   "harm_or_delay": "harm",
+   "harm_magnitude": "Arthritis and arthroplasty, not death. Roos 1998: KL≥2 OA 48% vs 7% at 21 yr after open meniscectomy, RR 14.0. MAT survivorship 73.5% at 10 yr, 60.3% at 15 yr; complication 21.3%, failure 10.6%.",
+   "workaround_burden": "Donor meniscus: sizing error 7.8% by standard method, >10% by anthropometric methods; irradiation reduces strength; fresh-frozen grafts limited viability; concurrent HTO when malaligned; graft failure 1.8–25% and reoperation 1.6–33% within 5 yr by fixation technique. MAT at 0.12–0.24 per 100,000/yr. Cost: not found. Denominator (symptomatic meniscus-deficient population): not found.",
+   "evidence": [
+    {
+     "claim": "15-yr knee arthroplasty 13.49%; RR 10.27; RR 39.62 at 30–39; HR 2.99 vs contralateral",
+     "url": "https://boneandjoint.org.uk/Article/10.1302/0301-620X.101B9.BJJ-2019-0335.R1",
+     "label": "verified"
+    },
+    {
+     "claim": "KL≥2 OA 48% vs 7% at 21 yr; RR 14.0",
+     "url": "https://lup.lub.lu.se/record/c447ace2-e156-45f5-992a-190d9736cd14",
+     "label": "verified"
+    },
+    {
+     "claim": "MAT survivorship 73.5% at 10 yr, 60.3% at 15 yr",
+     "url": "https://scholars.houstonmethodist.org/en/publications/long-term-survival-analysis-and-outcomes-of-meniscal-allograft-tr/",
+     "label": "verified"
+    },
+    {
+     "claim": "MAT incidence 0.12–0.24 per 100,000 (secondary); sizing error; processing trade-offs; failure/reoperation by fixation",
+     "url": "https://aoj.amegroups.org/article/view/9746/html",
+     "label": "verified"
+    },
+    {
+     "claim": "Complication 21.3%, failure 10.6% (Elattar, secondary); ~700,000 meniscectomies/yr (secondary)",
+     "url": "https://www.mdedge.com/content/5-points-meniscal-allograft-transplantation/page/0/1",
+     "label": "verified"
+    },
+    {
+     "claim": "387,833 meniscectomies 2005–2011 in ~9% US sample",
+     "url": "https://vivo.weill.cornell.edu/display/pubid23863849",
+     "label": "verified"
+    }
+   ]
+  },
+  "q4_solved_today": {
+   "answer": "yes",
+   "standard_of_care": "Repair when the tear allows; partial meniscectomy when it does not; MAT for the symptomatic meniscus-deficient knee in a young patient, with HTO when malaligned; non-operative care until arthroplasty.",
+   "workarounds": "Partial synthetic scaffolds in some markets, only with an intact meniscal rim.",
+   "evidence": [
+    {
+     "claim": "MAT indications and partial scaffold limits",
+     "url": "https://aoj.amegroups.org/article/view/9746/html",
+     "label": "verified"
+    }
+   ]
+  },
+  "q5_whats_wrong": {
+   "answer": "yes",
+   "gap_in_fields_words": "ESSKA: 'Loss of meniscus function may negatively affect the knee in the long term'; 'the high risk of osteoarthritis after APM remains a concern'. MAT 'remains underutilized'; 'graft deterioration inevitably occurs at 7 to 10 years'; 'the decision often depends on the surgeon's preference and graft availability'. 'Neither CMI nor Actifit has demonstrated a clear advantage over partial meniscectomy'.",
+   "evidence": [
+    {
+     "claim": "ESSKA 2016 statements",
+     "url": "https://link.springer.com/content/pdf/10.1007/s00167-016-4407-4.pdf",
+     "label": "verified"
+    },
+    {
+     "claim": "MAT underutilized; sizing; availability; scaffold statements",
+     "url": "https://aoj.amegroups.org/article/view/9746/html",
+     "label": "verified"
+    },
+    {
+     "claim": "Graft deterioration inevitably occurs at 7 to 10 years",
+     "url": "https://www.mdedge.com/content/5-points-meniscal-allograft-transplantation/page/0/1",
+     "label": "verified"
+    }
+   ]
+  },
+  "q6_looking_to_change": {
+   "answer": "yes",
+   "demand_evidence": "Repairs doubled 2005–2011 while meniscectomies flat (Abrams 2013); debridement down, repair up in all age groups 2001–2017 (ABOS 2021); ESSKA 2016 consensus against first-line surgery for degenerative tears; two meniscus implants with FDA Breakthrough designations, one De Novo planned 2026 (BONEZONE Feb 2026) — demand evidence only.",
+   "practice_shift_flag": "Gate 8: the shift to repair and away from meniscectomy shrinks the meniscus-deficient population at the margin; irreparable tears not shown to be disappearing.",
+   "evidence": [
+    {
+     "claim": "Repair incidence doubled; meniscectomy flat",
+     "url": "https://vivo.weill.cornell.edu/display/pubid23863849",
+     "label": "verified"
+    },
+    {
+     "claim": "Debridement decreased, repair increased 2001–2017",
+     "url": "https://read.qxmd.com/read/33797976/long-term-national-trends-of-arthroscopic-meniscal-repair-and-debridement",
+     "label": "verified"
+    },
+    {
+     "claim": "Breakthrough designations; De Novo planned 2026",
+     "url": "https://bonezonepub.com/2026/02/11/new-implants-seek-to-close-the-treatment-gap-for-meniscus-tears/",
+     "label": "verified"
+    }
+   ]
+  },
+  "q7_business_contradiction": {
+   "answer": "no",
+   "note": "No contradiction evident; a timing split recorded — the surgeon who removes tissue does not see the arthritis, the arthroplasty surgeon did not remove it, and the payer at 50 may differ from the payer at 35. Who pays at the time of loss is gate 6."
+  }
+ },
+ "case_against": "The most dramatic harm number (48% vs 7%, RR 14) is from open meniscectomy in 1973, a procedure no longer performed; the modern cohort shows 13.49% arthroplasty at 15 years in patients with mean age 50 and degenerative tears, and ESSKA calls the degenerative tear a feature of a knee already at risk — the knee, not the meniscectomy, may be the problem (HR 2.99 vs the other knee blunts but does not settle this). The acute population is tiny as measured (MAT 0.12–0.24 per 100,000, flat for a decade): either rare, or the field has decided to live with it. The field already has a tissue replacement and its main response is upstream — repair more, remove less — which shrinks the population. Most meniscectomy patients are over 50 with degenerative tears for whom the consensus is not to operate first. Nobody has priced the problem.",
+ "verdict": "advance",
+ "verdict_reason": "Losing meniscal tissue is a real, recognized, counted harm — tenfold arthroplasty risk in a national cohort of 834,393, fortyfold in the young — and the only tissue replacement is rare, hard to size, and expected to deteriorate within a decade by the field's own account. Standard of care does not solve it. The open question is how many people have the acute form; routed to the interviews and gate 3. Harm is arthritis and reoperation, not death.",
+ "park": {
+  "noted": false,
+  "re_trigger": "",
+  "check_date": ""
+ },
+ "for_the_founder": {
+  "confirm_or_override": [
+   "Problem sentence — restated from an input that named only the technology; both halves sourced",
+   "First indication — symptomatic meniscus-deficient knee under ~55 (the MAT population); alternative: young patient at the time of an irreparable tear (RR 39.62 at 30–39), larger but harm delayed 10–20 yr",
+   "Harm framing — arthritis, reoperation, arthroplasty; not mortality"
+  ],
+  "owed": []
+ },
+ "gap_register": [
+  {
+   "gap": "How many patients have a symptomatic meniscus-deficient knee",
+   "why_it_matters": "Harm of loss is counted; the number living with it is not — only how many get the treatment",
+   "kind": "not_found"
+  },
+  {
+   "gap": "Why MAT is so rare",
+   "why_it_matters": "'Underutilized' without a reason: availability, sizing, cost, training, reluctance, or lack of need",
+   "kind": "practitioner_only"
+  },
+  {
+   "gap": "What the problem costs",
+   "why_it_matters": "No MAT episode cost, allograft price, or attributable arthroplasty cost found",
+   "kind": "not_found"
+  },
+  {
+   "gap": "Whether the old and foreign numbers hold here",
+   "why_it_matters": "48% vs 7% is from 1973 open meniscectomy; 13.49% is a UK cohort, mean age 50; no US rate for today's young APM patient",
+   "kind": "old_data"
+  },
+  {
+   "gap": "How often a young patient's tear is irreparable",
+   "why_it_matters": "The entry point to the problem; no rate found",
+   "kind": "not_found"
+  },
+  {
+   "gap": "Who owns the downstream arthritis",
+   "why_it_matters": "Harm arrives a decade later in a different surgeon's clinic",
+   "kind": "practitioner_only"
+  },
+  {
+   "gap": "What happens when a MAT wears out",
+   "why_it_matters": "Survivorship measured; the course after failure not described",
+   "kind": "open"
+  },
+  {
+   "gap": "Whether the shift to repair is shrinking the problem",
+   "why_it_matters": "Repair rising, debridement falling; effect on the meniscus-deficient population not measured",
+   "kind": "open"
+  }
+ ],
+ "discovery_kit": {
+  "sentence_to_test": "When a young patient's meniscus can't be repaired you take it out, and you know what that knee looks like in fifteen years — and the only tissue you can put back is a donor meniscus that's hard to size and wears out in a decade.",
+  "who_to_talk_to": [
+   "A sports-medicine orthopaedic surgeon who performs MAT at a center that does them regularly",
+   "An orthopaedic surgeon who performs meniscectomy and repair but refers MAT out — the entry point",
+   "An arthroplasty surgeon who replaces knees in patients with a meniscectomy history — inherits the consequence",
+   "Someone at a musculoskeletal tissue bank who fills meniscal allograft orders — lives with sizing, supply, processing",
+   "The person who pays — a payer medical director who approves MAT, or the orthopaedic service-line administrator who absorbs allograft and episode cost",
+   "Optional sixth: a patient who had a meniscectomy young and a MAT or knee replacement later"
+  ],
+  "gap_questions": [
+   {
+    "gap": "How many patients have a symptomatic meniscus-deficient knee",
+    "why_it_matters": "The desk found how many get the treatment (0.12–0.24 per 100,000), not how many need it",
+    "ask": "In a typical year, how many patients do you see whose knee pain you attribute to missing meniscus? How many of those do you offer a transplant, and what happens to the rest?",
+    "closes_if": "Surgeons give a count per year and describe the ones not offered MAT and why",
+    "warning_if": "'A handful, if that' from the MAT surgeon and 'I can't think of one' from the general surgeon"
+   },
+   {
+    "gap": "Why MAT is so rare",
+    "why_it_matters": "The field calls MAT underutilized without saying why",
+    "ask": "The last patient you thought should have a meniscal transplant and didn't get one — what stopped it?",
+    "closes_if": "A specific obstacle (size match, payer, osteotomy, patient) and how often it recurs",
+    "warning_if": "'Nothing stops it; the demand just isn't there.' Routing signal, not a warning: 'the tissue bank handles sizing; not my problem' — take the question to conversation 4"
+   },
+   {
+    "gap": "What the problem costs",
+    "why_it_matters": "No cost per MAT episode, allograft price, or attributable arthroplasty cost was opened",
+    "ask": "What does a meniscal transplant cost your institution, graft included, and who approves it? When a 50-year-old with an old meniscectomy comes in for a knee replacement, does anyone connect the two bills?",
+    "closes_if": "A graft price, an episode cost, a named approver; a yes or no on whether anyone links the two",
+    "warning_if": "Nobody can name the graft price or the approver, and nobody connects the two"
+   },
+   {
+    "gap": "Whether the old and foreign numbers hold here",
+    "why_it_matters": "48% vs 7% is from 1973 open meniscectomy; 13.49% is UK, mean age 50; no US rate for today's young APM patient",
+    "ask": "Of the young patients you took significant meniscus out of ten or fifteen years ago, how many have come back with arthritis? How do you know?",
+    "closes_if": "An estimate and a way they learn of it",
+    "warning_if": "They believe it is rare and cannot say how they would know"
+   },
+   {
+    "gap": "How often a young patient's tear is irreparable",
+    "why_it_matters": "The entry point to the problem; no rate found",
+    "ask": "Of the meniscus tears you operated on last month in patients under 40, how many could you repair, and in how many did you end up removing most of the meniscus?",
+    "closes_if": "A proportion and what decides it",
+    "warning_if": "'Almost everything is repairable now' from all three surgeons"
+   },
+   {
+    "gap": "Who owns the downstream arthritis",
+    "why_it_matters": "The harm arrives a decade later in a different surgeon's clinic",
+    "ask": "When a patient you did a meniscectomy on comes back years later with arthritis, do you hear about it? Does it change anything for you?",
+    "closes_if": "The surgeon describes feeling it or names who does",
+    "warning_if": "'They go to the joint-replacement guys; I never see them again,' with no consequence to anyone who could have acted. Routing signal: the arthroplasty surgeon says 'I see them all the time; nobody upstream knows' — ask who should"
+   },
+   {
+    "gap": "What happens when a MAT wears out",
+    "why_it_matters": "Survivorship measured; the course after failure not described",
+    "ask": "The last meniscal transplant of yours that failed or wore down — what happened next for that patient, and what would you have wanted instead?",
+    "closes_if": "A specific course and a stated wish",
+    "warning_if": "Failures described as rare and inconsequential"
+   },
+   {
+    "gap": "Whether the shift to repair is shrinking the problem",
+    "why_it_matters": "Repair rising and debridement falling; effect on the meniscus-deficient population not measured",
+    "ask": "Compared with ten years ago, are you seeing more or fewer young patients with significant meniscal loss? What's driving it?",
+    "closes_if": "A direction and a reason",
+    "warning_if": "All five say 'fewer every year, and it's going to zero'"
+   }
+  ],
+  "core_questions": [
+   "Tell me about the last young patient whose meniscus you couldn't save. What did you do, and what did you tell them about their knee's future?",
+   "When did you last perform or refer a meniscal transplant? What decided it, and what got in the way?",
+   "How do you find out, years later, what happened to the knees you took meniscus out of?",
+   "What do you wish you had in the room when a tear turns out to be irreparable?",
+   "Who in your institution notices when a 35-year-old comes back for a knee replacement at 50?"
+  ],
+  "disqualifying_findings": [
+   "Surgeons say the young, symptomatic, meniscus-deficient patient is rare and cannot recall one from the past year.",
+   "MAT surgeons say graft supply and sizing are fine and the only limit is that few patients need it.",
+   "Nobody can describe a consequence of meniscal loss they personally see; nobody connects the arthritis back.",
+   "Everyone says the answer is repair, and that the irreparable tear is vanishing.",
+   "Payers who fund the arthroplasty do not connect it to the meniscectomy and see no reason to pay at the time of loss."
+  ],
+  "pointers": [
+   "Do not pitch. Do not describe, name, or hint at the technology; if asked, say you are studying the problem first and will share later.",
+   "Ask about the last time, not the usual case.",
+   "Ask what it cost — in time, money, staff, outcomes — and who paid.",
+   "'That sounds interesting' means nothing. A story about a recurring complication with its consequences is a signal.",
+   "Let silence work; do not fill it or lead the witness.",
+   "Write down their words, not your summary; note which gap each answer closes.",
+   "When someone says a step costs nothing, ask who pays for the people and the time it takes. A cost the speaker doesn't feel is usually a cost someone else does — find that person before you strike the gap.",
+   "Five conversations are a screen, not a validation; they decide whether the idea earns thirty more."
+  ],
+  "bring_back": [
+   {
+    "gap": "How many patients have a symptomatic meniscus-deficient knee",
+    "status": "open",
+    "quote": ""
+   },
+   {
+    "gap": "Why MAT is so rare",
+    "status": "open",
+    "quote": ""
+   },
+   {
+    "gap": "What the problem costs",
+    "status": "open",
+    "quote": ""
+   },
+   {
+    "gap": "Whether the old and foreign numbers hold here",
+    "status": "open",
+    "quote": ""
+   },
+   {
+    "gap": "How often a young patient's tear is irreparable",
+    "status": "open",
+    "quote": ""
+   },
+   {
+    "gap": "Who owns the downstream arthritis",
+    "status": "open",
+    "quote": ""
+   },
+   {
+    "gap": "What happens when a MAT wears out",
+    "status": "open",
+    "quote": ""
+   },
+   {
+    "gap": "Whether the shift to repair is shrinking the problem",
+    "status": "open",
+    "quote": ""
+   }
+  ]
+ },
+ "flags_for_later_gates": [
+  {
+   "gate": 2,
+   "flag": "Record of meniscal substitutes (allografts, partial scaffolds, polymer implants, tissue-engineered constructs) and the fixation/sizing/processing literature — fatal-flaw review"
+  },
+  {
+   "gate": 3,
+   "flag": "Size of the meniscus-deficient population is the central unknown: MAT 0.12–0.24 per 100,000; meniscectomies in the hundreds of thousands per year (secondary); no denominator found"
+  },
+  {
+   "gate": 4,
+   "flag": "Named in sources: Stryker (CMI), Phoenix Kinetics (NUsurface), OrthoPreserve (Defender); tissue banks as incumbent MAT suppliers — recorded, not evaluated"
+  },
+  {
+   "gate": 5,
+   "flag": "Customer-discovery kit"
+  },
+  {
+   "gate": 6,
+   "flag": "Who pays for MAT today (prior auth, allograft reimbursement in the episode); harm of loss paid 10–20 years later, often by a different payer"
+  },
+  {
+   "gate": 7,
+   "flag": "Two meniscus implants with FDA Breakthrough designations (2019; Jan 2025); one De Novo planned 2026 after an earlier advisory hearing; a cell- or tissue-based meniscus likely a different pathway — note only"
+  },
+  {
+   "gate": 8,
+   "flag": "Practice shift: repair rising, debridement falling (2001–2017; 2005–2011); consensus against first-line surgery for degenerative tears; post-meniscectomy population contracting at the margin — track"
+  },
+  {
+   "gate": 0,
+   "flag": "Team gate — founder background supplied in conversation; not evaluated here"
+  }
+ ],
+ "research_log": {
+  "time_spent_min": 35,
+  "pages_opened": 9,
+  "sources": [
+   {
+    "claim": "107 pts 21 yr after open meniscectomy vs 68 controls: radiographic changes 71% vs 18%; KL≥2 48% vs 7%; RR 14.0 (3.5–121.2)",
+    "url": "https://lup.lub.lu.se/record/c447ace2-e156-45f5-992a-190d9736cd14",
+    "title": "Knee osteoarthritis after meniscectomy: prevalence of radiographic changes after twenty-one years, compared with matched controls (Arthritis Rheum)",
+    "year": "1998",
+    "label": "verified"
+   },
+   {
+    "claim": "834,393 isolated APM, UK; 15-yr knee arthroplasty 13.49%; RR 10.27 vs general population, 39.62 at 30–39; HR 2.99 vs contralateral",
+    "url": "https://boneandjoint.org.uk/Article/10.1302/0301-620X.101B9.BJJ-2019-0335.R1",
+    "title": "Long-term rates of knee arthroplasty in a cohort of 834 393 patients with a history of arthroscopic partial meniscectomy (Bone Joint J)",
+    "year": "2019",
+    "label": "verified"
+   },
+   {
+    "claim": "MAT systematic review, 658 pts: survivorship 73.5% at 10 yr, 60.3% at 15 yr; 50% at 19, 15.1% at 24 yr",
+    "url": "https://scholars.houstonmethodist.org/en/publications/long-term-survival-analysis-and-outcomes-of-meniscal-allograft-tr/",
+    "title": "Long-Term Survival Analysis and Outcomes of Meniscal Allograft Transplantation With Minimum 10-Year Follow-Up (Arthroscopy)",
+    "year": "2019",
+    "label": "verified"
+   },
+   {
+    "claim": "MAT indicated <55; US incidence 0.12–0.24/100,000 (Cvetanovich 2015, secondary); underutilized; sizing error 7.8%/>10%; processing trade-offs; failure 1.8–25%, reoperation 1.6–33% by fixation; CMI/Actifit no clear advantage",
+    "url": "https://aoj.amegroups.org/article/view/9746/html",
+    "title": "Meniscal allograft transplantation and scaffolds: a narrative review (Ann Jt)",
+    "year": "2026",
+    "label": "verified"
+   },
+   {
+    "claim": "~700,000 meniscectomies/yr US (secondary); ideal MAT candidate <50; Elattar: complication 21.3%, failure 10.6%; graft deterioration inevitably at 7–10 yr",
+    "url": "https://www.mdedge.com/content/5-points-meniscal-allograft-transplantation/page/0/1",
+    "title": "5 Points on Meniscal Allograft Transplantation (Am J Orthop)",
+    "year": "2018",
+    "label": "verified"
+   },
+   {
+    "claim": "Surgery not first-line for DMLs (Grade A); loss of meniscus function may negatively affect the knee long term (Grade B); higher OA risk after APM (Grade C)",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00167-016-4407-4.pdf",
+    "title": "Surgical management of degenerative meniscus lesions: the 2016 ESSKA meniscus consensus (KSSTA)",
+    "year": "2017",
+    "label": "verified"
+   },
+   {
+    "claim": "PearlDiver 2005–2011 (~9% US <65): 387,833 meniscectomies, 23,640 repairs; repair incidence doubled; meniscectomy up 14%, total not significantly increased",
+    "url": "https://vivo.weill.cornell.edu/display/pubid23863849",
+    "title": "Trends in meniscus repair and meniscectomy in the United States, 2005-2011 (Am J Sports Med)",
+    "year": "2013",
+    "label": "verified"
+   },
+   {
+    "claim": "ABOS Part II 2001–2017, 131,047 cases: debridement decreased in all age groups, repair increased",
+    "url": "https://read.qxmd.com/read/33797976/long-term-national-trends-of-arthroscopic-meniscal-repair-and-debridement",
+    "title": "Long-term National Trends of Arthroscopic Meniscal Repair and Debridement (Am J Sports Med)",
+    "year": "2021",
+    "label": "verified"
+   },
+   {
+    "claim": "Partial meniscectomy doesn't address the underlying condition; Defender Breakthrough Jan 2025, pilot 2026; NUsurface De Novo planned H1 2026 — demand evidence only",
+    "url": "https://bonezonepub.com/2026/02/11/new-implants-seek-to-close-the-treatment-gap-for-meniscus-tears/",
+    "title": "New Implants Seek to Close the Treatment Gap for Meniscus Tears (BONEZONE)",
+    "year": "2026",
+    "label": "verified"
+   },
+   {
+    "claim": "Report of Cvetanovich et al. on MAT incidence 2007–2011 — access restricted, not opened",
+    "url": "https://cm.healio.com/news/orthopedics/20150818/no-change-in-incidence-found-with-meniscal-allograft-transplantation-from-2007-to-2011",
+    "title": "No change in incidence found with meniscal allograft transplantation from 2007 to 2011 (Healio)",
+    "year": "2015",
+    "label": "unverified"
+   }
+  ],
+  "searches_with_no_result": [
+   "number of US patients with a symptomatic meniscus-deficient knee",
+   "cost of a MAT episode or a meniscal allograft",
+   "arthroplasty cost attributable to prior meniscectomy",
+   "proportion of meniscal tears that are irreparable",
+   "US rate of knee arthroplasty after partial meniscectomy (UK cohort used)"
+  ]
+ }
+}
