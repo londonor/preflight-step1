@@ -1,0 +1,11 @@
+{
+  "name": "biotech-preflight",
+  "displayName": "Biotech Pre-Flight Checklist",
+  "version": "1.0.0",
+  "description": "Gate 1 of the Biotech Venture Qualification Framework: decides from opened sources whether a biotech or medtech idea addresses a real problem, returns advance / stop / hold, and hands back a customer-discovery kit built around the gaps in the evidence.",
+  "author": { "name": "Ricardo Londono" },
+  "homepage": "https://github.com/OWNER/REPO",
+  "repository": "https://github.com/OWNER/REPO",
+  "license": "MIT",
+  "keywords": ["biotech", "medtech", "startup", "customer-discovery", "venture-qualification"]
+}
